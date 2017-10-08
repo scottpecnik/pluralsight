@@ -44,5 +44,13 @@
 #
 class pluralsight {
 
+  user{ 'pluralsight':
+    ensure => present,
+    home   => '/home/pluralsight',
+  }
+
+  file { '/home/pluralsight':
+    ensure => directory,
+  }
 
 }
